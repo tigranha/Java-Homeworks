@@ -42,10 +42,10 @@ public class User {
 
     @Override
     public String toString() {
-        return "User: " +
-                "firstName : " + this.getFirstName() +
-                ", lastName: " + this.getLastName() +
-                ", userName: " + this.getUserName() +
-                ", email: " + this.getEmail();
+        return "User: \n\t" +
+                "firstName: " + this.getFirstName() +
+                "\n\tlastName: " + this.getLastName() +
+                "\n\tuserName: " + this.getUserName() +
+                "\n\temail: " + this.getEmail();
     }
 }

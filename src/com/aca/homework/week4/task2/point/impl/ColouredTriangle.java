@@ -1,4 +1,4 @@
-package com.aca.homework.week4.task2.point;
+package com.aca.homework.week4.task2.point.impl;
 
 import com.aca.homework.week4.task2.point.enums.Colour;
 
@@ -26,11 +26,12 @@ public class ColouredTriangle extends Triangle {
             final Triangle otherTriangle = (Triangle) obj;
             return otherTriangle.equals(this);
         }
-        final ColouredTriangle otherColouredTriangle = (ColouredTriangle) obj;
-        final Triangle thisTriangle = this;
+        final ColouredTriangle other = (ColouredTriangle) obj;
 
-        return this.getColor().equals(otherColouredTriangle.getColor()) &&
-                 thisTriangle.equals(obj);
+        return this.getColor().equals(other.getColor()) &&
+                this.getFirstPoint().equals(other.getFirstPoint()) &&
+                this.getSecondPoint().equals(other.getSecondPoint()) &&
+                this.getThirdPoint().equals(other.getThirdPoint());
     }
 
     @Override

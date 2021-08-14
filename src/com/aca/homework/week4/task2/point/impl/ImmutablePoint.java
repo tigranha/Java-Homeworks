@@ -1,4 +1,6 @@
-package com.aca.homework.week4.task2.point;
+package com.aca.homework.week4.task2.point.impl;
+
+import com.aca.homework.week4.task2.point.Point;
 
 public final class ImmutablePoint implements Point {
 
@@ -15,9 +17,9 @@ public final class ImmutablePoint implements Point {
         this.pointY = immutablePoint.getPointY();
     }
 
-//    public static ImmutablePoint getInstance(final int pointX, final int pointY) {
-//        return new ImmutablePoint(pointX, pointY);
-//    }
+    public static ImmutablePoint getInstance(final int pointX, final int pointY) {
+        return new ImmutablePoint(pointX, pointY);
+    }
 
 
     @Override
@@ -48,7 +50,7 @@ public final class ImmutablePoint implements Point {
 
     @Override
     public boolean equals(final Object obj) {
-        if(this == obj){
+        if (this == obj) {
             return true;
         }
         if (!(obj instanceof ImmutablePoint)) {

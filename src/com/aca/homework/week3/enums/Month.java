@@ -1,6 +1,6 @@
 package com.aca.homework.week3.enums;
 
-public enum Months {
+public enum Month {
 
     JANUARY("January"),
     FEBRUARY("February"),
@@ -15,10 +15,10 @@ public enum Months {
     NOVEMBER("November"),
     DECEMBER("December");
 
-    private static final Months[] VALUES = Months.values();
+    private static final Month[] VALUES = Month.values();
     private final String value;
 
-    Months(final String value) {
+    Month(final String value) {
         this.value = value;
     }
 

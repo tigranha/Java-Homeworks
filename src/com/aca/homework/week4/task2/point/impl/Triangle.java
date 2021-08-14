@@ -1,4 +1,4 @@
-package com.aca.homework.week4.task2.point;
+package com.aca.homework.week4.task2.point.impl;
 
 import static com.aca.homework.week4.task2.assertionutils.AssertionUtils.assertNotNull;
 
@@ -27,12 +27,12 @@ public class Triangle {
 
     }
 
-//    public static Triangle getInstance(final ImmutablePoint firstPoint,
-//                                final ImmutablePoint secondPoint,
-//                                final ImmutablePoint thirdPoint) {
-//
-//        return new Triangle(firstPoint, secondPoint, thirdPoint);
-//    }
+    public static Triangle getInstance(final ImmutablePoint firstPoint,
+                                       final ImmutablePoint secondPoint,
+                                       final ImmutablePoint thirdPoint) {
+
+        return new Triangle(firstPoint, secondPoint, thirdPoint);
+    }
 
     public ImmutablePoint getFirstPoint() {
         return new ImmutablePoint(this.firstPoint);
@@ -48,7 +48,7 @@ public class Triangle {
 
     @Override
     public boolean equals(final Object obj) {
-        if (this == obj){
+        if (this == obj) {
             return true;
         }
         if (!(obj instanceof Triangle)) {
