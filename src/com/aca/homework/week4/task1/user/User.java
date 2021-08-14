@@ -6,15 +6,46 @@ public class User {
     private final String userName;
     private final String email;
 
-    public User(User user) {
+    public User(final String firstName, final String lastName, final String userName, final String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.email = email;
+    }
+
+    public User(final User user) {
         this.firstName = user.firstName;
         this.lastName = user.lastName;
         this.userName = user.userName;
         this.email = user.email;
-
     }
 
-    public User copy(User user){
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public User copy(User user) {
         return new User(user);
+    }
+
+    @Override
+    public String toString() {
+        return "User: " +
+                "firstName : " + this.getFirstName() +
+                ", lastName: " + this.getLastName() +
+                ", userName: " + this.getUserName() +
+                ", email: " + this.getEmail();
     }
 }

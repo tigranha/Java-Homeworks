@@ -1,0 +1,2 @@
+package com.aca.homework.week4.task2.point;public class Main {
+}

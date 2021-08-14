@@ -22,14 +22,14 @@ public enum Months {
         this.value = value;
     }
 
-    public String getValue() {
-        return this.value;
-    }
-
     public static String getMonth(final int index) {
-        if (index > 12){
+        if (index > 12 || index < 0) {
             return "No such month";
         }
         return VALUES[index - 1].getValue();
+    }
+
+    public String getValue() {
+        return this.value;
     }
 }
