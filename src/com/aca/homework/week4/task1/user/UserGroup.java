@@ -14,15 +14,16 @@ public class UserGroup {
         index++;
     }
 
-    protected User[] clone() {
-        final User[] cloneArr = new User[ARRAY_SIZE];
-        for (int i = 0; i < cloneArr.length; i++) {
+    public UserGroup clone() {
+        UserGroup userGroup = new UserGroup();
+
+        for (int i = 0; i < ARRAY_SIZE; i++) {
             if (this.usersArray[i] == null){
                 break;
             }
-            cloneArr[i] = new User(this.usersArray[i]);
+            userGroup.usersArray[i] = new User(this.usersArray[i]);
         }
-        return cloneArr;
+        return userGroup;
     }
 
     public void printAllUsers(){
