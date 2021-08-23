@@ -5,7 +5,7 @@ import com.aca.homework.week4.task2.point.enums.Colour;
 public class ColouredTriangle extends Triangle {
     private final Colour color;
 
-    public ColouredTriangle(final Triangle triangle,final Colour color) {
+    public ColouredTriangle(final Triangle triangle, final Colour color) {
         super(triangle);
         this.color = color;
     }
@@ -23,15 +23,13 @@ public class ColouredTriangle extends Triangle {
             return false;
         }
         if (obj.getClass().equals(Triangle.class)){
-            final Triangle otherTriangle = (Triangle) obj;
-            return otherTriangle.equals(this);
+            final Triangle other = (Triangle) obj;
+            return super.equals(other);
         }
         final ColouredTriangle other = (ColouredTriangle) obj;
 
         return this.getColor().equals(other.getColor()) &&
-                this.getFirstPoint().equals(other.getFirstPoint()) &&
-                this.getSecondPoint().equals(other.getSecondPoint()) &&
-                this.getThirdPoint().equals(other.getThirdPoint());
+                super.equals(other);
     }
 
     @Override
